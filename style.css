@@ -6813,3 +6813,44 @@ svg {
     transform: none !important;
   }
 }
+
+
+/* Mobile-only portrait position adjustment for home page */
+.mobile-visual-slot {
+  display: none;
+}
+
+@media (max-width: 680px) {
+  .mobile-visual-slot {
+    display: flex;
+    justify-content: center;
+    margin: 14px 0 6px;
+  }
+
+  .mobile-visual-slot .portrait-stage {
+    width: min(76vw, 290px);
+    min-width: 0;
+  }
+
+  .mobile-visual-slot .security-seal {
+    top: -18px;
+    right: -2px;
+  }
+
+  .premium-visual {
+    display: none;
+  }
+}
+
+@media (max-width: 430px) {
+  .mobile-visual-slot .portrait-stage {
+    width: min(76vw, 260px);
+  }
+
+  .mobile-visual-slot .security-seal {
+    top: -18px;
+    right: -2px;
+    width: 52px;
+    height: 58px;
+  }
+}
